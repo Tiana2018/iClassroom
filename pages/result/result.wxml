@@ -1,0 +1,28 @@
+<view class="container">
+
+   <view class="v1?vshow:vhidden">
+
+      <icon type="success" size="100" ></icon>
+
+      <view class="font-color-c24e4e margin-top-30">交卷成功</view>
+
+
+   </view> 
+   <view class="v2?vshow:vhidden"> 
+
+      <icon type="warn" size="100"></icon>
+
+      <view class="font-color-c24e4e margin-top-30">系统检测到存在作弊嫌疑，监控视频将上传给老师审核</view>
+
+
+   </view> 
+
+
+
+   <view class="butbox" style="margin-top:40rpx;">
+
+         <button bindtap="backMine" style="background-color:white;" >返回</button> 
+
+    </view>
+
+</view>

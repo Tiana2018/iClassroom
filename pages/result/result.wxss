@@ -1,0 +1,48 @@
+.imgsize{
+
+  width: 200rpx;
+
+  height: 200rpx;
+
+}
+
+.result{
+
+  margin-top: 120rpx;
+
+  display:flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.margin-top-30{
+
+  margin-top: 30rpx;
+
+}
+
+.vshow{ margin-top: 120rpx;
+
+  display:flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+ }
+.vhidden{ margin-top: 120rpx;
+
+  display:none;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/todo/todo",
+    "pages/tododetail/tododetail",
+    "pages/tomato/tomato",
+    "pages/chart/chart",
+    "pages/my/my",
+    "pages/feedback/feedback",
+    "pages/subject/subject",
+    "pages/studetail/studetail",
+    "pages/teadetail/teadetail",
+    "pages/studetail2/studetail2"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "iclassroom",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#e74c3c",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "事务集",
+        "iconPath": "images/事务列表g.png",
+        "selectedIconPath": "images/事务列表r.png"
+      },
+      {
+        "pagePath": "pages/tomato/tomato",
+        "text": "番茄钟",
+        "iconPath": "images/西红柿1.png",
+        "selectedIconPath": "images/西红柿.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "自习室",
+        "iconPath": "images/学校管理.png",
+        "selectedIconPath": "images/学校管理r.png"
+      },
+      {
+        "pagePath": "pages/subject/subject",
+        "text": "课程",
+        "iconPath": "images/读书3.png",
+      
+        "selectedIconPath": "images/读书1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/个人g.png",
+        "selectedIconPath": "images/个人.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 1000,
+    "downloadFile": 1000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

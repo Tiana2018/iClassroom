@@ -1,0 +1,35 @@
+ <view class="selection">
+    <swiper indicator-dots autoplay interval="5000" duration="500" circular>
+      <swiper-item wx:for="{{banners}}"wx:key="index">
+         <image src="{{item}}" class="slide-image" mode="aspectFit" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 景点卡片开始 -->
+  <view class="card">
+    <view class="word">
+      <text class="name">四六级提分训练营</text>
+      <label>【2020】提高英语成绩，备战四六级考试</label>
+    </view>
+    <view class="rate">
+      <vant-icon name="medal" color="#d3b078"/><text> 最受欢迎课程第一名</text>
+    </view>
+    <view class="map">
+      <vant-icon name="map-marked"/><text> 6月28日开课！</text>
+    </view>
+     <view class="map">
+      <vant-icon name="underway"/><text> 总课时：48课时</text>
+    </view>
+    <view class="map">
+      <vant-icon name="label"/>
+      <text>课程介绍:全方面提高英语能力，致力于提分听力阅读，写作，学霸用了都说好，不满意退钱！</text>
+    </view>
+    <label>199</label>
+  </view>
+<view class="btn">
+<text class="fonter" bindtap="buy">立即参加</text>
+  
+</view>
+
+  

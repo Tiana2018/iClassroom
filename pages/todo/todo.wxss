@@ -1,0 +1,16 @@
+/* @import "todo.wxss" */
+.scroll-view {
+  display: flex;
+  height: 100%;
+}
+
+.scroll-view-content {
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}

@@ -1,0 +1,78 @@
+<!--pages/studetail/studetail.wxml-->
+<view id="u0_state0" class="panel_state" data-label="State1" style="">
+          <view id="u0_state0_content" class="panel_state_content">
+
+             
+            <view id="u1" class="my_default box_2">
+              <view id="u1_view" class=""></view>
+            </view>
+
+       
+
+            <!-- Unnamed (动态面板) -->
+            <view id="u3" class="my_default">
+              <view id="u3_state0" class="panel_state" data-label="State1" style="">
+                <view id="u3_state0_content" class="panel_state_content">
+
+                   
+                  <view id="u4" class="my_default box_2">
+                    <view id="u4_view" class=""></view>
+                  </view>
+
+                   
+                  <view id="u5" class="my_default label">
+                    <view id="u5_view" class=""></view>
+                    <view id="u5_text" class="text ">
+                      <p><span>番茄钟</span></p>
+                    </view>
+                  </view>
+
+                   
+                  <view id="u6" class="my_default box_2">
+                    <view id="u6_view" class=""></view>
+                  </view>
+
+                   
+                  <view id="u7" class="my_default primary_button">
+                    <image id="u7_img" class="img " src="/images/detail/u7.png" />
+                    <view id="u7_text" class="text " style="top: 18px; transform-origin: 190px 18.5px 0px;">
+                      <p><span>网课一</span></p>
+                    </view>
+                  </view>
+
+                   
+                  <view id="u8" class="my_default _文本段落">
+                    <view id="u8_view" class=""></view>
+                    <view id="u8_text" class="text ">
+                      <p><span>一、教学内容：</span></p><p><span>介绍课程的设置目标</span></p><p><span>课程的考核内容及评价体系</span></p><p><span>课程的学习模式</span></p><p><span>管理学的理解（本人）</span></p><p><span>软件项目的基础概念</span></p><p><span>软件项目管理的知识体系</span></p>
+                    </view>
+                  </view>
+                  <view id="u9" class="my_default _图片">
+                    <image id="u9_img" class="img " src="/images/detail/u9.png"/>
+                  </view>
+
+           
+
+                   
+                  <view id="u10" class="my_default primary_button" bindtap= 'detail2'>
+                    <image id="u10_img" class="img " src="/images/detail/u10.png"/>
+                    <view id="u10_text" class="text " style="top: 18px; transform-origin: 190px 18px 0px;">
+                      <p><span>网课二</span></p>
+                    </view>
+                  </view>
+
+                 
+                  
+                </view>
+              </view>
+            </view>
+
+        </view>
+        </view>
+
+<view id="exam" class="my_default primary_button" bindtap= 'detail2' style="border-width: 0px;position: absolute;left: 10px;top: 700px;width: 384px;height: 72px;font-size: 28px;">
+<image id="exam_img" class="img " src="/images/detail/u10.png" style="width: 384px;height:72px;position: absolute;"/>
+<view id="exam_text" class="text " style="line-height: 72px;text-align: center;top: 18px; transform-origin: 190px 18px 0px;">
+<p><span>进入考试</span></p>
+</view>
+</view>

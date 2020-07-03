@@ -1,0 +1,31 @@
+  <view class="search" >
+      <view class="search_info" catchtap="backmy">
+        我的余额：500
+      </view>
+  </view>
+  
+  <view class="selection">
+    <swiper indicator-dots autoplay interval="5000" duration="500" circular>
+      <swiper-item wx:for="{{banners}}" wx:key="index">
+        <view>
+         <image src="{{item}}" class="slide-image" mode="aspectFit" />
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+<view class="recommend">
+    <text class="subtitle" >推荐课程 >> </text>
+    <view class="recommend_list">
+        <view wx:for="{{product}}" wx:key="_id" class="recommend_item">
+          <navigator url="../detail/detail">
+            <image src="{{item.src}}"/>
+            <text class="recommend_name">{{item.name}}</text>
+            <text class="recommend_info">{{item.dec}}</text>
+            <label>{{item.price}}</label>
+          </navigator>
+        </view>
+    </view> 
+</view>
+
+

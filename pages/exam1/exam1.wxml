@@ -1,0 +1,35 @@
+
+<script src="../face_detection/tracking-min.js"></script>
+  <script src="../face_detection/face-min.js"></script>
+
+
+<camera mode="normal" device-position="back" flash="auto" binderror="error" style="width: 50%; height: 125px;margin:0 auto;">
+</camera>
+
+<view class="vertical">
+    <view class="vertical">
+        <view>1.软件项目管理的流程不包括</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items1}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+    
+    <view class="vertical">
+        <view>2.项目经理的职责不包括以下哪些内容</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items2}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+</view>
+
+<button bindtap="submit" >提交</button> 
+
+

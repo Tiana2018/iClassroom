@@ -1,0 +1,91 @@
+page{
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+/* 搜索栏 */
+.search{
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 5px;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  margin: 5px;
+}
+.search_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  height: 100%;
+  width: 96%;
+  background-color: #e74c3c;
+  border-radius: 16rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  color: white
+}
+/* 轮播图 */
+.selection{
+  width: 96%;
+  align-self: center;
+  height: 480rpx;
+}
+swiper{
+  height: 480rpx;
+  width: 100%;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+swiper image{
+  width: 100%;
+}
+
+/* 推荐景点 */
+.recommend .subtitle{
+  display: block;
+  padding: 3% 5%;
+  font-size: larger;
+  margin-bottom:20rpx; 
+}
+.recommend_list{
+  width: 100%;
+  /* height: 360rpx; */
+}
+.recommend_item{
+  float: left;
+  width: 42%;
+  margin-left: 3%;
+  margin-bottom: 20px;
+}
+.recommend_item label{
+  color:#e74c3c;
+  font-weight:1000;
+  right:0;
+  
+}
+
+.recommend_item image{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10rpx;
+}
+.recommend_item text{
+  display:block;
+}
+.recommend_item text.recommend_name,
+.recommend_item text.recommend_info,
+.newest_mv_list text.recommend_name{
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+}
+.recommend_item text.recommend_info{
+  font-size: 13px;
+  line-height: 20px;
+  color: #666;
+}
