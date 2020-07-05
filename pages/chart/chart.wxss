@@ -1,7 +1,3 @@
-button::after{
-  border: none;
-  }
-
 .modal-box{
   width: 580rpx;
   height: 510rpx;
@@ -37,8 +33,6 @@ button::after{
   width: 100%;
   height: 40%;
 }
-
-
 
 .icon{
   width:40px;
@@ -113,11 +107,193 @@ input{
   justify-content: center;
 }
 
-.button{
-  color:#ca6ad6;
-  margin-right:10px;
-  padding:0;
-  font-family:microsoft yahei;
-  font-weight:600;
-  font-size:small;
+
+.rooms{
+  display: flex;
+  flex-direction: column;
+  padding: 5rpx 10rpx;
 }
+
+
+
+.item{
+  height: 150rpx;
+  width: 100%;
+  margin: 5rpx 10rpx 5rpx 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.move{
+  height: 150rpx;
+  background: white
+}
+
+.move .move-item{
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  background: white;
+  
+}
+
+.info{
+  width: 100%;
+  margin:10rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  font-family: STHeiti;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name{
+  font-size: 38rpx; 
+  letter-spacing: 3rpx;
+}
+
+.creatinfo{
+  display: flex;
+  font-size:30rpx;
+}
+
+.date{
+  margin-left: 20rpx;
+}
+
+.enter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 130rpx;
+  font-size: 35rpx;
+}
+
+.right{
+  width: 50rpx;
+  height: 50rpx;
+}
+  
+.noCol{
+  width: 200rpx;
+  height: 150rpx;
+  background: lightgrey;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: larger;
+  color: white 
+}
+
+.line{
+  width: 100%;
+  height: 2rpx;
+  background: #f3f3f3;
+}
+
+
+/*mask*/  
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px; 
+}  
+  
+.drawer_title{  
+  padding:15px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+
+}  
+.drawer_content {  
+  height: 210px;  
+  overflow-y: scroll; /*超出父盒子高度可滚动*/  
+}  
+  
+.btn{
+  display: flex;
+  width: 100%;
+}
+
+.btn_ok{  
+  width:50%;
+  padding: 10px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+}  
+  
+.top{  
+  padding-top:8px;  
+  margin: 10rpx 20rpx
+}  
+.bottom {  
+    padding-bottom:8px;  
+}  
+.title {  
+    height: 30px;  
+    line-height: 30px;  
+    width:100%;  
+    text-align: left;  
+    display: inline-block;  
+    font: 300 28rpx/30px "microsoft yahei";  
+}  
+  
+.input_base {  
+    border: 2rpx solid #ccc;  
+    padding-left: 10rpx;  
+    margin-right: 50rpx;  
+}  
+.input_h30{  
+    height: 30px;  
+    line-height: 30px;  
+}  
+.input_h60{  
+    height: 60px;  
+}  
+.input_view{  
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000;  
+    line-height: 30px;  
+}  
+  
+input {  
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000 ;  
+}  
+ 
+.grid { 
+  display:flex;
+  flex-direction: column; 
+}  
+.col-0 {-webkit-box-flex:0;box-flex:0;}  
+.col-1 {-webkit-box-flex:1;box-flex:1;}  
+.fl { float: left;}  
+.fr { float: right;}

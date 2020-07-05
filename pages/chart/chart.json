@@ -1,4 +1,5 @@
 {
-    "navigationBarTitleText": "自习室"
+    "navigationBarTitleText": "自习室",
+    "enablePullDownRefresh":true
   }
   

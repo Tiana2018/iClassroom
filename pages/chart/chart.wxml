@@ -1,127 +1,108 @@
 <view class="modal-box" hidden="{{flag}}" bindtap="hide">
-     <view class="horizontal">
-         <image src="/images/list.png" style="width:16px;height:150px;margin-right:10px;" />
-         <view class="vertical">
-             <text style="font-size:large;font-weight:600;">网课1</text>
-             <text style="margin-bottom:30px;">详细内容： 软件项目管理1.1</text>
-             
-             <text style="font-size:large;font-weight:600;">网课2</text>
-             <text>详细内容： 软件项目管理1.2</text>
-         </view>
-     </view>
-     
-    
-     <button class="knowBtn" bindtap="hide" style='margin:30rpx auto'>确定</button>   
-      
+  <view class="horizontal">
+     <image src="/images/list.png" style="width:16px;height:150px;margin-right:10px;" />
+    <view class="vertical">
+       <text style="font-size:large;font-weight:600;">网课1</text>
+       <text style="margin-bottom:30px;">详细内容： 软件项目管理1.1</text>
+       <text style="font-size:large;font-weight:600;">网课2</text>
+      <text>详细内容： 软件项目管理1.2</text>
+    </view>
+  </view>
+  <button class="knowBtn" bindtap="hide" style='margin:30rpx auto'>确定</button>   
 </view>
-
-
 
 <view class="chart_view">
-    <text class="chart_text">软件项目管理自习室（ID：00001）</text>
+  <text class="chart_text">软件项目管理自习室（ID：00001）</text>
 </view>
+
 <view class="all">
-    <view class="horizontal">
-        
-        <view style="margin-left:10px;margin-right:15px;font-family:microsoft yahei;font-weight:600;font-size:medium;">今日任务:</view>
-        <view>
-            <view class="vertical" style="margin-left:10px;font-family:microsoft yahei;font-weight:600;font-size:small;color:#524f4f;">
-                <view class="horizontal">
-                    <view>网课1</view>
-                    <checkbox style="transform: scale(0.6,0.6);" value="网课1" />
-                </view>
-                
-                <view class="horizontal">
-                    <view>网课2</view>
-                    <checkbox style="transform: scale(0.6,0.6);" value="网课2" />
-                </view>
-            </view>          
+  <view class="horizontal">
+    <view style="margin-left:10px;margin-right:15px;font-family:microsoft yahei;font-weight:600;font-size:medium;">今日任务:</view>
+    <view>
+      <view class="vertical" style="margin-left:10px;font-family:microsoft yahei;font-weight:600;font-size:small;color:#524f4f;">
+        <view class="horizontal">
+          <view>网课1</view>
+          <checkbox style="transform: scale(0.6,0.6);" value="网课1" />
         </view>
-        <button class="button" bindtap="show">任务列表</button>
-        <view style="margin-left:0;"><image src="/images/任务.png" style="width:30px;height:30px;"/></view>
+        <view class="horizontal">
+          <view>网课2</view>
+          <checkbox style="transform: scale(0.6,0.6);" value="网课2" />
+        </view>
+      </view>          
     </view>
-
-    <view class="horizontal-1" >
-        <image src="/images/cbccb676a13263fb1f2a08a63c206323.jpg" class="background" />
-        
-        <view><image src="/images/6 飞天小女警-01.png" class="icon"/></view>
-        <view class="vertical">
-            <view style="margin-left:2px;font-size:large;font-weight:700;">小女警</view>
-            <view class="horizontal">
-                <view>今日学习时长：</view>
-                <view style="font-weight:700;font-size:large;">8小时30分钟</view>
-            </view>          
-        </view>
-        <view>
-            <view>
-                <view class="vertical" style="margin-left:100px;">
-                    <view class="horizontal">
-                        <view>网课1</view>
-                        <view><image src="/images/复选框 (2).png" class="cbox" /></view>
-                    </view>
-                    <view class="horizontal">
-                        <view>网课2</view>
-                        <view><image src="/images/复选框.png" class="cbox" /></view>
-                    </view>
-                </view>          
-            </view>
-        </view>       
+    <button class="button" bindtap="show">任务列表</button>
+    <view style="margin-left:0;"><image src="/images/任务.png" style="width:30px;height:30px;"/></view>
     </view>
-
     <view class="horizontal-1" >
-        <image src="/images/e320d666239096a06507f5ba389da52f.png" class="background" />
-        
-        <view><image src="/images/2 多啦a梦-01.png" class="icon"/></view>
-        <view class="vertical">
-            <view style="margin-left:2px;font-size:large;font-weight:700;">哆啦A梦</view>
-            <view class="horizontal">
-                <view>今日学习时长：</view>
-                <view style="font-weight:700;font-size:large;">7小时18分钟</view>
-            </view>          
-        </view>
-        <view>
-            <view>
-                <view class="vertical" style="margin-left:100px;">
-                    <view class="horizontal">
-                        <view>网课1</view>
-                        <view><image src="/images/复选框 (2).png" class="cbox" /></view>
-                    </view>
-                    <view class="horizontal">
-                        <view>网课2</view>
-                        <view><image src="/images/复选框 (2).png" class="cbox" /></view>
-                    </view>
-                </view>          
-            </view>
-        </view>       
-    </view>
-
-    <view class="horizontal-1" >
-        <image src="/images/151418196d258c5454d6fcabe537f96e.jpg" class="background" />
-        
-        <view><image src="/images/4 海绵宝宝-01.png" class="icon"/></view>
-        <view class="vertical">
-            <view style="margin-left:2px;font-size:large;font-weight:700;">海绵宝宝(我)</view>
-            <view class="horizontal">
-                <view>今日学习时长：</view>
-                <view style="font-weight:700;font-size:large;">2小时32分钟</view>
-            </view>          
-        </view>
-        <view>
-            <view>
-                <view class="vertical" style="margin-left:100px;">
-                    <view class="horizontal">
-                        <view>网课1</view>
-                        <view><image src="/images/复选框.png" class="cbox" /></view>
-                    </view>
-                    <view class="horizontal">
-                        <view>网课2</view>
-                        <view><image src="/images/复选框.png" class="cbox" /></view>
-                    </view>
-                </view>          
-            </view>
-        </view>       
+      <image src="/images/151418196d258c5454d6fcabe537f96e.jpg" class="background" />
     </view>
 </view>
 
 
+<view class="room" wx:for="{{rooms}}" wx:key="index">
+  <view class="item">
+     <movable-area class="move" style="width:{{(width-100)*2}}rpx">
+      <movable-view class="move-item" style="width:{{width*2}}rpx" direction="horizontal" inertia="true" friction="0.1" x="{{x}}" animation="false">
+        <view class="info">
+          <view class="left">
+            <text class="name">{{item.name}}</text>
+            <view class="creatinfo">
+              <text>{{item.creater}}</text>
+              <text class="date">{{item.date}}</text>
+            </view>
+          </view>
+          <view class="enter" data-id="{{item._id}}" bindtap="enter">
+            <text>进入</text>
+            <image src="/images/icons/进入.png" class="right"></image>
+          </view>
+        </view>
+      </movable-view>
+    </movable-area>
+    
 
+    <view class="noCol" data-index="{{index}}" data-id="{{item._id}}" bindtap="cancle">退出自习室</view>
+  </view>
+  <view class="line"></view>
+</view>
+
+<view>
+ <button plain="true" type="primary" bindtap="creat">创建自习室</button>
+</view>
+
+
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<form animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}" bindsubmit="formsubmit">  
+  <!--drawer content-->  
+  <view class="drawer_title">自习室信息</view> 
+
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">创建人</label>  
+      <input class="input_base input_h30 col-1" name="cName" placeholder="请输入您的姓名"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">自习室名称</label>  
+      <input class="input_base input_h30 col-1" name="rName" placeholder="请输入自习室名称"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">联系方式</label>  
+      <input class="input_base input_h30 col-1" name="phone" placeholder="请输入联系方式"></input>  
+    </view>  
+    <view class="top bottom grid">  
+      <label class="title col-0">最大容纳人数</label>  
+      <radio-group  bindchange="radioChange" name="num">
+        <label wx:for="{{check}}" wx:key="index">
+          <radio value="{{item.val}}" bindtap="radio" checked="{{item.status}}">{{item.val}}</radio>
+        </label>
+      </radio-group> 
+    </view>  
+  </view>  
+  <view class="btn">
+    <button class="btn_ok" bindtap="powerDrawer" data-statu="close">
+      取消</button>
+    <button class="btn_ok" form-type="submit" bindtap="powerDrawer" data-statu="close">
+      确定</button> 
+  </view>
+   
+</form>

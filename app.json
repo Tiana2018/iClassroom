@@ -9,7 +9,9 @@
     "pages/subject/subject",
     "pages/studetail/studetail",
     "pages/teadetail/teadetail",
-    "pages/studetail2/studetail2"
+    "pages/studetail2/studetail2",
+    "pages/login/login"
+  
   ],
   "window": {
     "backgroundTextStyle": "dark",

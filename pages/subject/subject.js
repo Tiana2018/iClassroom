@@ -20,7 +20,18 @@ wx. navigateTo({
  url: '/pages/studetail/studetail'
 })
 },
-
+  goToTalkPage1: function () {
+    console.log('trytry');
+    wx.navigateTo({
+      url: '/pages/studetail/studetail'
+    })
+  },
+  goToTalkPage2: function () {
+    console.log('trytry');
+    wx.navigateTo({
+      url: '/pages/studetail2/studetail2'
+    })
+  },
 
  /**
   * 生命周期函数--监听页面初次渲染完成

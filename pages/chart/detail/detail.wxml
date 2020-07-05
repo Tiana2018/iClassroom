@@ -1,0 +1,32 @@
+<view class="top">
+  <button class="btn" bindtap="show">详情</button>
+  <button class="btn" bindtap="cancle">解散</button>
+</view>
+
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<form animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}" bindsubmit="formsubmit">  
+  <!--drawer content-->  
+  <view class="drawer_title">自习室信息</view> 
+
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">创建人</label>  
+      <input class="input_base input_h30 col-1" name="cName" value="{{detail.creater}}"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">自习室名称</label>  
+      <input class="input_base input_h30 col-1" name="rName" value="{{detail.name}}"></input>  
+    </view>  
+    <view class="top bottom grid">  
+      <label class="title col-0">联系方式</label>  
+      <input class="input_base input_h30 col-1" name="phone" value="{{detail.phone}}"></input>  
+    </view>  
+  </view>  
+  <view class="btn">
+    <button class="btn_ok" bindtap="powerDrawer" data-statu="close">
+      返回</button>
+    <button class="btn_ok" form-type="submit" bindtap="powerDrawer" data-statu="close">
+      确定</button> 
+  </view>
+</form>

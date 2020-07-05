@@ -1,0 +1,88 @@
+
+.mainpage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  align-self: center;
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  align-self: center;
+}
+.logo{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  height:160px;
+  align-items: center;
+}
+.logo image{
+  width:100%;
+  height: 100%;
+}
+.login-top{
+  font-size: 50rpx;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  color: #333333;
+  margin-bottom: 30rpx;
+  align-items: center;
+}
+.login{
+  width:100%;
+  border-top: 1px solid gainsboro;
+  padding: 5rpx;
+  margin-top: 20rpx;
+}
+.login form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form .username, .pwd{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid gainsboro;
+  font-size: 28rpx;
+}
+form .username input{
+  margin-left: 20rpx;
+  flex: 6;
+}
+form label{
+  flex:2
+}
+form view{
+  flex:2
+}
+form .pwd input{
+  margin-left: 20rpx;
+  flex: 6;
+}
+.errMsg{
+  color:rgb(228,48,48);
+  font-size: 20rpx;
+  width:100%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.login-button{
+  cursor: pointer;
+  width: 550rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #e74c3c;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  color: white;
+}
