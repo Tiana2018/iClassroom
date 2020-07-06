@@ -1,0 +1,16 @@
+<image src="../../images/l1.jpg" mode="widthFix" ></image>
+<view class="cour_text">
+  <view class="cour_name">
+    <view> 软件项目管理</view>
+    <view class="cour_dis"> 
+    <text>主讲老师： XXX</text>
+    </view>
+  </view>
+  <view class="cour_desc"> 介绍课程的设置目标;课程的考核内容及评价体系;软件项目的基础概念;软件项目管理的知识体系</view>
+  <view class="cour_other"> 项目的需求分析定位及自己团队的资源情况来抉择。例如，敏捷就不是所有团队可以操作的，团队规模大了就可能失控。腾讯采用敏捷近二十年，还要全员强化敏捷的体系教育。 再就是有同学强调过的不可能三角（时间 成本 质量），项目经理要在其中需求平衡</view>
+  <view class="cour_name">
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">网课学习</button>
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">进入考试</button>
+
+  </view>
+</view>

@@ -10,6 +10,7 @@
     "pages/studetail/studetail",
     "pages/teadetail/teadetail",
     "pages/studetail2/studetail2",
+    "pages/mylesson/mylesson",
     "pages/login/login"
   
   ],

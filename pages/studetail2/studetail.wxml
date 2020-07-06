@@ -1,0 +1,16 @@
+<image src="../../images/lesson.jpg" mode="widthFix" ></image>
+<view class="cour_text">
+  <view class="cour_name">
+    <view>学术论文写作（计算机科学）</view>
+    <view class="cour_dis"> 
+    <text>主讲老师： XXX</text>
+    </view>
+  </view>
+  <view class="cour_desc"> 在这个课程中，你将学习科学研究和发表的意义</view>
+  <view class="cour_other"> At present, my top reasons for publishing is to get a degree and to receive expert feedback on results and ideas. As I am a totally new hand in academic circles, I do need advices and help to progress and go further. If I become one of the leaders in my field in the future, I mean, if it is possible, the main reason for me to publish may turn to attract and invite others to join me. After all, in my heart, publishing is another way of communication.</view>
+  <view class="cour_name">
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">网课学习</button>
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">进入考试</button>
+
+  </view>
+</view>

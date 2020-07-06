@@ -10,9 +10,10 @@ Page({
 
  detail1:function() {
   console.log('trytry');
-wx. navigateTo({
- url: '/pages/studetail/studetail'
-})
+   let model = "c3";
+   wx.navigateTo({
+     url: '/pages/exam1/exam1?model=' + model
+   })
 },
 
  /**

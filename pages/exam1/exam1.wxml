@@ -6,7 +6,7 @@
 <camera mode="normal" device-position="back" flash="auto" binderror="error" style="width: 50%; height: 125px;margin:0 auto;">
 </camera>
 
-<view class="vertical">
+<view  wx:if="{{model=='c1'}}"class="vertical">
     <view class="vertical">
         <view>1.软件项目管理的流程不包括</view>
         <view class="vertical">
@@ -29,7 +29,52 @@
         </view>    
     </view>
 </view>
-
+<view  wx:if="{{model=='c2'}}"class="vertical">
+    <view class="vertical">
+        <view>1.Variety of research ______ and techniques are available to SE researchers, and while several overviews exist, there is consistency neither in the research methods covered nor in the terminology used.</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items3}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+    
+    <view class="vertical">
+        <view>2.【单选题】Experimental results ______ that ReHMM outperforms other inference algorithms.</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items4}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+</view>
+<view  wx:if="{{model=='c3'}}"class="vertical">
+    <view class="vertical">
+        <view>1.AI时代主要的人机交互方式为()</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items1}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+    
+    <view class="vertical">
+        <view>2.2016年3月,人工智能程序()在韩国首尔以4:1的比分战胜的人类围棋冠军李世石.</view>
+        <view class="vertical">
+             <radio-group class="vertical">
+                 <label wx:for="{{items2}}">
+                     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                 </label>
+             </radio-group>
+        </view>    
+    </view>
+</view>
 <button bindtap="submit" >提交</button> 
 
 

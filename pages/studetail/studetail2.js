@@ -1,4 +1,4 @@
-// pages/subject/subject.js
+// pages/studetail2/studetail2.js
 Page({
 
  /**
@@ -8,30 +8,20 @@ Page({
 
  },
 
+ detail1:function() {
+  console.log('trytry');
+   let model = "c1";
+   wx.navigateTo({
+     url: '/pages/exam1/exam1?model=' + model
+   })
+},
+
  /**
   * 生命周期函数--监听页面加载
   */
  onLoad: function (options) {
 
  },
- goToTalkPage:function() {
-  console.log('trytry');
-wx. navigateTo({
- url: '/pages/studetail/studetail2'
-})
-},
-  goToTalkPage1: function () {
-    console.log('trytry');
-    wx.navigateTo({
-      url: '/pages/studetail2/studetail'
-    })
-  },
-  goToTalkPage2: function () {
-    console.log('trytry');
-    wx.navigateTo({
-      url: '/pages/studetail2/studetail2'
-    })
-  },
 
  /**
   * 生命周期函数--监听页面初次渲染完成

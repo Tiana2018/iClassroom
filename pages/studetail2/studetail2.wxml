@@ -1,14 +1,16 @@
 <image src="../../images/c2.jpg" mode="widthFix" ></image>
 <view class="cour_text">
   <view class="cour_name">
-    <view>courDetail.name</view>
+    <view>古文字学</view>
     <view class="cour_dis"> 
-    <text>发行： courDetail.publishTime</text>
+    <text>主讲老师： XXX</text>
     </view>
   </view>
-  <view class="cour_desc"> courDetail.desc</view>
-  <view class="cour_other"> 点赞：courDetail.likeCount</view>
-  <view class="cour_other"> 收藏：courDetail.subCount</view>
-  <view class="cour_other"> 评论：courDetail.commentCount</view>
-  <view class="cour_other"> 分享：courDetail.shareCount</view>
+  <view class="cour_desc"> 以古汉字和各种古汉字资料为研究对象的学科</view>
+  <view class="cour_other"> 古文字学是以古汉字和各种古汉字资料为研究对象的学科。 在中国﹐对古文字的研究开始得很早﹐但是﹐长期以来是包含在作为“小学”一部分的传统文字学和以古铜器和碑刻等为主要研究对象的金石学里的﹐一直到20世纪才有“古文字学”的名称。人们所说的古文字学﹐内容并不一致﹐大体上可以分为广义和狭义两种。</view>
+  <view class="cour_name">
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">网课学习</button>
+  <button class='goodbutton' bindtap='detail1' hover-class="hover">进入考试</button>
+
+  </view>
 </view>

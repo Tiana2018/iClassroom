@@ -2,6 +2,7 @@
 Page({
 
   data:{
+    model:"c1",
     items1: [
       {name: 'A', value: '项目启动阶段'},
       {name: 'B', value: '项目规划阶段'},
@@ -13,10 +14,41 @@ Page({
       {name: 'B', value: '组织实施'},
       {name: 'C', value: '项目控制'},
       {name: 'D', value: '系统支持'},
+    ],
+    items3: [
+      { name: 'A', value: 'papers' },
+      { name: 'B', value: 'methods' },
+      { name: 'C', value: 'institutions' },
+      { name: 'D', value: 'systems' },
+    ],
+    items4: [
+      { name: 'A', value: 'tell' },
+      { name: 'B', value: 'analyze' },
+      { name: 'C', value: 'test' },
+      { name: 'D', value: 'indicate' },
+    ],
+    items5: [
+      { name: 'A', value: '鼠标' },
+      { name: 'B', value: '键盘' },
+      { name: 'C', value: '触屏' },
+      { name: 'D', value: '语音+视觉' },
+    ],
+    items6: [
+      { name: 'A', value: 'AlphaGo' },
+      { name: 'B', value: 'DeepMind' },
+      { name: 'C', value: 'DeepBlue' },
+      { name: 'D', value: 'AlphaGo Zero' },
     ]
   },
   
-  onLoad:function(){
+  onLoad: function (options){
+    var that = this
+    var model = options.model;
+    console.log(options)
+    that.setData({
+      model: model
+    })
+
     this.setTime();
     
   },

@@ -6,7 +6,8 @@ Page({
       { id: "feedback", name: "意见反馈", page: "../feedback/feedback" },
       { id: "courses", name: "教育商城", page: "../index/index" },
       { id: "teacher", name: "管理课程", page: "../teadetail/teadetail" },
-      { id: "login", name: "退出登录", page: "../login/login" }
+      { id: "mylesson", name: "我的课程", page: "../mylesson/mylesson" },
+      { id: "login", name: "用户登录", page: "../login/login" }
     ]
   },
   userInfoHandler(data) {
