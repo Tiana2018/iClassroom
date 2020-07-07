@@ -1,1 +1,55 @@
 /* pages/mylesson/mylesson.wxss */
+
+/* 推荐景点 */
+.recommend .subtitle{
+  display: block;
+  padding: 3% 5%;
+  font-size: larger;
+  margin-bottom:20rpx; 
+  background-color: #e74c3c;
+  color: white;
+ 
+}
+
+
+.recommend_list{
+  width: 100%;
+  background-color: #e74c3c;
+  /* height: 360rpx; */
+}
+.recommend_item{
+  float: left;
+  width: 42%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  background-color: #eae2f1; 
+}
+.recommend_item label{
+  color:#e74c3c;
+  font-weight:1000;
+  right:0;
+  
+}
+
+.recommend_item image{
+  width: 100%;
+  height: 200rpx;
+}
+.recommend_item text{
+  display:block;
+}
+.recommend_item text.recommend_name,
+.recommend_item text.recommend_info,
+.newest_mv_list text.recommend_name{
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+}
+.recommend_item text.recommend_info{
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}

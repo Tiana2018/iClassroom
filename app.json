@@ -11,6 +11,7 @@
     "pages/teadetail/teadetail",
     "pages/studetail2/studetail2",
     "pages/mylesson/mylesson",
+    "pages/more/more",
     "pages/login/login"
   
   ],

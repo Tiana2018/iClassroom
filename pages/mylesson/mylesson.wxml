@@ -1,2 +1,29 @@
-<!--pages/mylesson/mylesson.wxml-->
-<text>pages/mylesson/mylesson.wxml</text>
+<view class="recommend">
+    <text class="subtitle" >我学的课 >> </text>
+    <view class="recommend_list">
+        <view wx:for="{{product}}" wx:key="_id" class="recommend_item">
+          <navigator url="../more/more">
+            <image src="{{item.src}}"/>
+            <text class="recommend_name">{{item.name}}</text>
+            <text class="recommend_info">{{item.dec}}</text>
+            <text class="recommend_info">{{item.location}}</text>
+            <text class="recommend_info">{{item.time}}</text>
+          </navigator>
+        </view>
+    </view> 
+   
+    <view class="recommend_list">
+        <view class="recommend_item">
+          <navigator url="../subject/subject">
+            <image class="all" src="/images/banner/more.png"/>
+          </navigator>
+        </view>
+    </view> 
+     <view class="recommend_list">
+        <view class="recommend_item">
+          <navigator url="../more/more">
+            <image src="/images/banner/his.png"/>
+          </navigator>
+        </view>
+    </view>
+</view>
