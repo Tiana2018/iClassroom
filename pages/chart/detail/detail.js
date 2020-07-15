@@ -7,9 +7,13 @@ Page({
    */
   data: {
     check: [{ val: 20, status: false }, { val: 50, status: false }, { val: 100, status: false }, { val: 200, status: false }],
-      detail:{},
-      showModalStatus: false,
-      
+    scores: [{ val: 2, status: false }, { val: 5, status: false }, { val: 10, status: false}],
+    detail:{},
+    tasks:[],
+    checkList:[],
+    showModalStatus: false,
+    showCreatTask:false,
+    sumScore:0
   },
 
   /**
@@ -19,7 +23,8 @@ Page({
     var that=this
     rooms.doc(options.id).get().then(res=>{
       that.setData({
-        detail:res.data
+        detail:res.data,
+        tasks:res.data.tasks
       })
     })
   },
@@ -41,7 +46,13 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    
+  },
 
+  onUnload:function(){
+    this.setData({
+      showCreatTask: true
+    })
   },
 
   show:function(){
@@ -50,10 +61,17 @@ Page({
     })
   },
 
+  add:function(){
+    this.setData({
+      showCreatTask: true
+    })
+  },
+
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
     this.util(currentStatu)
   },
+
   util: function (currentStatu) {
     /* 动画部分 */
     // 第1步：创建动画实例   
@@ -87,7 +105,8 @@ Page({
       if (currentStatu == "close") {
         this.setData(
           {
-            showModalStatus: false
+            showModalStatus: false,
+            showCreatTask: false
           }
         );
       }
@@ -114,13 +133,68 @@ Page({
     })
   },
 
-  cancle:function(){
-    var id = this.data.detail._id
-    rooms.doc(id).remove()
-    
-    wx.navigateBack({
-      delta:1
+  creatTask:function(e){
+    let tName = e.detail.value.tName;
+    let score = e.detail.value.score;
+    console.log(tName + score)
+    let newTask={"done":false,"score":score,"task_name":tName}
+    let tasks=this.data.tasks.concat(newTask)
+    rooms.doc(this.data.detail._id).update({
+      data: {
+        tasks: tasks     
+      }
     })
+
+    this.setData({
+      tasks:tasks
+    })
+    console.log(this.data.tasks)
+  },
+
+  changeScore:function(e){
+    this.setData({
+      checkList:e.detail.value
+    })
+  },
+
+ 
+
+  hidmodal:function(){
+    var that=this;
+    var checkList=this.data.checkList;
+    console.log(checkList)
+    var sumScore=0;
+    for(let it=0;it<checkList.length;it++){
+      if(checkList[it]!=""){
+        sumScore += parseInt(this.data.tasks[checkList[it]].score);
+      }
+    }
+    wx.showModal({
+      title: '提示',
+      content: '获得积分'+sumScore+',是否退出',
+      success(res) {
+        getApp().globalData.sorceSum=sumScore
+        if (res.confirm) {
+          rooms.doc(that.data.detail._id).remove();
+
+          var pages = getCurrentPages();
+          var currPage = pages[pages.length - 1];   //当前页面
+          var prevPage = pages[pages.length - 2];  //上一个页面
+          // 直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+          prevPage.setData({
+            sumScore: sumScore
+          })
+
+          prevPage.showList();
+          prevPage.onLoad();
+          
+          wx.navigateBack({
+            delta: 1
+          })
+        } 
+      }
+    })
+  },
+
   
-  }
 })

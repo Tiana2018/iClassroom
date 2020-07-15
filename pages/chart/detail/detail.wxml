@@ -1,7 +1,23 @@
-<view class="top">
-  <button class="btn" bindtap="show">详情</button>
-  <button class="btn" bindtap="cancle">解散</button>
+<view class="detail">
+  <text bindtap="show">{{detail.name}}</text>
 </view>
+
+<view class="sec">
+  <text>今日任务合集</text> 
+  <text bindtap="add">填加任务</text>
+</view> 
+
+<checkbox-group class="tasks" bindchange="changeScore">
+  <view wx:for="{{tasks}}" wx:key="index">
+    <checkbox wx:if="{{item.done}}" checked="true" disabled="true">{{item.task_name}}</checkbox>
+    <checkbox wx:else value="{{index}}" >{{item.task_name}}</checkbox>
+  </view>
+</checkbox-group> 
+
+<view>
+ <button plain="true" type="primary" bindtap="hidmodal">计算得分并退出</button>
+</view>
+
 
 <!--content-->  
 <!--使用animation属性指定需要执行的动画-->  
@@ -11,17 +27,25 @@
 
   <view class="drawer_content">  
     <view class="top grid">  
-      <label class="title col-0">创建人</label>  
-      <input class="input_base input_h30 col-1" name="cName" value="{{detail.creater}}"></input>  
+      <label class="title col-0">自习室邀请码</label>  
+      <input class="input_base input_h30 col-1" value="{{detail._id}}" disabled="true"></input>  
+    </view>
+    <view class="top grid">  
+      <label class="title col-0">*自习室名称</label>  
+      <input class="input_base input_h30 col-1" name="rName" value="{{detail.name}}"></input>  
+    </view>
+    <view class="top grid">  
+      <label class="title col-0">*创建人昵称</label>  
+      <input class="input_base input_h30 col-1" name="cName" type="text" value="{{detail.creater}}"></input>  
     </view>  
     <view class="top grid">  
-      <label class="title col-0">自习室名称</label>  
-      <input class="input_base input_h30 col-1" name="rName" value="{{detail.name}}"></input>  
+      <label class="title col-0">*创建人联系方式</label>  
+      <input class="input_base input_h30 col-1" name="phone" type="number" value="{{detail.phone}}"></input>  
     </view>  
     <view class="top bottom grid">  
-      <label class="title col-0">联系方式</label>  
-      <input class="input_base input_h30 col-1" name="phone" value="{{detail.phone}}"></input>  
-    </view>  
+      <label class="title col-0">自习室最大容量</label>  
+      <input class="input_base input_h30 col-1" type="number" value="{{detail.max_num}}" disabled="true"></input>  
+    </view>
   </view>  
   <view class="btn">
     <button class="btn_ok" bindtap="powerDrawer" data-statu="close">
@@ -30,3 +54,32 @@
       确定</button> 
   </view>
 </form>
+
+
+<form animation="{{animationData}}" class="drawer_box" wx:if="{{showCreatTask}}" bindsubmit="creatTask">  
+  <!--drawer content-->  
+  <view class="drawer_title">任务信息</view> 
+
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">任务名称</label>  
+      <input class="input_base input_h30 col-1" name="tName" placeholder="请输入任务名称"></input>  
+    </view>  
+    
+    <view class="top bottom grid">  
+      <label class="title col-0">任务积分</label>  
+      <radio-group name="score">
+        <label wx:for="{{scores}}" wx:key="index">
+          <radio value="{{item.val}}" bindtap="radio" checked="{{item.status}}">{{item.val}}</radio>
+        </label>
+      </radio-group> 
+    </view>
+  </view>  
+  <view class="btn">
+    <button class="btn_ok" bindtap="powerDrawer" data-statu="close">
+      返回</button>
+    <button class="btn_ok" form-type="submit" bindtap="powerDrawer" data-statu="close">
+      确定</button> 
+  </view>
+</form>
+

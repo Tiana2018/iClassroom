@@ -21,6 +21,7 @@
           <view class="errMsg"wx-if="{{nullMsg}}">用户名或密码不能为空</view> 
         </view>
         <button class="login-button" form-type="submit">登录</button>
+        <view class="errMsg" bindtap="chuce">没有账号，去注册</view> 
       </form>
     </view>
   </view>

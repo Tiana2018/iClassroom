@@ -37,13 +37,20 @@ Page({
         this.setData({
           model: username
         })
-        wx.redirectTo({
+        
+        wx.switchTab({
           url: 'my/my?model=' + model,
-        })
+          });
         console.log(
-          "success"
+          model
         )
       }
+    })
+  },
+
+  chuce:function(){
+    wx.navigateTo({
+      url:'../fillInfo/fillInfo'
     })
   },
   getuser(event){

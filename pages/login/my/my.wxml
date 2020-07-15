@@ -2,14 +2,19 @@
 <view >
     <view class="userinfo">
         <!-- 头像 -->
-        <image src="../../../images/7 小熊维尼-01.png" mode="widthFix" class="userinfo-avatar"></image>
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+        <!-- 昵称 -->
+         <open-data type="userNickName" class="userinfo-nickname"></open-data>
+        <!-- <image src="../../../images/7 小熊维尼-01.png" mode="widthFix" class="userinfo-avatar"></image> -->
         <!-- 昵称 -->
         <view class="new"> 
-          <view >昵称：{{model}}</view>
-          <view >学号：{{people.num}}</view>
-          <view >年龄：{{people.age}}</view>
+         
+          <!-- <view >昵称：{{model}}</view> -->
+           <view >学号：{{people.num}}  </view>
+           <view ></view>
+           <view>学校：{{people.school}}</view>
         </view>
-         <view class="userinfo-nickname">学校：{{people.school}}</view>
+        
     </view>
     <!-- 我的页面 item -->
     <view class="weui-cells weui-cells_after-title userinfo-item">

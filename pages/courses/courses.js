@@ -17,7 +17,7 @@ Page({
         detail: '提高英语成绩备战四级考试',
         location: '6月28日开课！',
         name: '【2020】四六级提分训练营！名师讲解',
-        price: '199',
+        price: '399',
         rate: '最受欢迎课程第一名',
         src: '/images/banner/b1.png',
         time: '48课时',

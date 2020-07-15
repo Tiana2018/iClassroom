@@ -1,6 +1,6 @@
   <view class="search" >
       <view class="search_info" catchtap="backmy">
-        我的余额：500
+        我的余额：{{score}}
       </view>
   </view>
   
@@ -18,12 +18,12 @@
     <text class="subtitle" >推荐课程 >> </text>
     <view class="recommend_list">
         <view wx:for="{{product}}" wx:key="_id" class="recommend_item">
-          <navigator url="../detail/detail">
+          <view bindtap="setail" >
             <image src="{{item.src}}"/>
             <text class="recommend_name">{{item.name}}</text>
             <text class="recommend_info">{{item.dec}}</text>
             <label>{{item.price}}</label>
-          </navigator>
+          </view>
         </view>
     </view> 
 </view>

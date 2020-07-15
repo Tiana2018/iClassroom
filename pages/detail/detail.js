@@ -1,4 +1,4 @@
-
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -26,12 +26,36 @@ Page({
       success: function (res) {
 
         if (res.confirm) {//这里是点击了确定以后
+          if(getApp().globalData.sorce-399<=0){
+            wx.showToast({
 
-
-          wx.navigateTo({
-            url: '../courses/courses'
-          })
-
+              title: '无法购买',
+        
+              icon: 'fail',
+        
+              duration: 2000//持续的时间
+        
+            })
+          }else{
+            getApp().globalData.sorce=getApp().globalData.sorce-399
+            var temp = getApp().globalData.sorce
+            console.log(getApp().globalData.sorce)
+            db.collection('user').doc('38d78ca75eddd5860068c28b2fb4373b').update({
+              data:{
+                score:temp
+              }
+            }).then(res=>{
+              console.log(getApp().globalData.sorce)
+              console.log(res);
+            }).catch(res=>{
+              console.log("fail")
+              console.log(res);
+            })
+            wx.redirectTo({
+              url: '../index/index'
+            })
+          }
+          
         } else {//这里是点击了取消以后
 
           console.log('用户点击取消')

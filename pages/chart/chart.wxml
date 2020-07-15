@@ -1,43 +1,6 @@
-<view class="modal-box" hidden="{{flag}}" bindtap="hide">
-  <view class="horizontal">
-     <image src="/images/list.png" style="width:16px;height:150px;margin-right:10px;" />
-    <view class="vertical">
-       <text style="font-size:large;font-weight:600;">网课1</text>
-       <text style="margin-bottom:30px;">详细内容： 软件项目管理1.1</text>
-       <text style="font-size:large;font-weight:600;">网课2</text>
-      <text>详细内容： 软件项目管理1.2</text>
-    </view>
-  </view>
-  <button class="knowBtn" bindtap="hide" style='margin:30rpx auto'>确定</button>   
+<view class="score">
+  <text>当前积分：{{sumScore}}</text>
 </view>
-
-<view class="chart_view">
-  <text class="chart_text">软件项目管理自习室（ID：00001）</text>
-</view>
-
-<view class="all">
-  <view class="horizontal">
-    <view style="margin-left:10px;margin-right:15px;font-family:microsoft yahei;font-weight:600;font-size:medium;">今日任务:</view>
-    <view>
-      <view class="vertical" style="margin-left:10px;font-family:microsoft yahei;font-weight:600;font-size:small;color:#524f4f;">
-        <view class="horizontal">
-          <view>网课1</view>
-          <checkbox style="transform: scale(0.6,0.6);" value="网课1" />
-        </view>
-        <view class="horizontal">
-          <view>网课2</view>
-          <checkbox style="transform: scale(0.6,0.6);" value="网课2" />
-        </view>
-      </view>          
-    </view>
-    <button class="button" bindtap="show">任务列表</button>
-    <view style="margin-left:0;"><image src="/images/任务.png" style="width:30px;height:30px;"/></view>
-    </view>
-    <view class="horizontal-1" >
-      <image src="/images/151418196d258c5454d6fcabe537f96e.jpg" class="background" />
-    </view>
-</view>
-
 
 <view class="room" wx:for="{{rooms}}" wx:key="index">
   <view class="item">
@@ -79,15 +42,15 @@
   <view class="drawer_content">  
     <view class="top grid">  
       <label class="title col-0">创建人</label>  
-      <input class="input_base input_h30 col-1" name="cName" placeholder="请输入您的姓名"></input>  
+      <input class="input_base input_h30 col-1" name="cName" type="text" placeholder="请输入您的姓名"></input>  
     </view>  
     <view class="top grid">  
       <label class="title col-0">自习室名称</label>  
-      <input class="input_base input_h30 col-1" name="rName" placeholder="请输入自习室名称"></input>  
+      <input class="input_base input_h30 col-1" name="rName" type="text" placeholder="请输入自习室名称"></input>  
     </view>  
     <view class="top grid">  
       <label class="title col-0">联系方式</label>  
-      <input class="input_base input_h30 col-1" name="phone" placeholder="请输入联系方式"></input>  
+      <input class="input_base input_h30 col-1" name="phone" type="number" placeholder="请输入联系方式"></input>  
     </view>  
     <view class="top bottom grid">  
       <label class="title col-0">最大容纳人数</label>  

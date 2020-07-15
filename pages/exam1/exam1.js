@@ -68,24 +68,69 @@ Page({
   setTime: function () {
     　　let that = this
     　　let ctx = wx.createCameraContext()
+        var count=0
     　　time = setInterval(function () {
     　　if (Math.round(Math.random()) == 1) {
-
+      count=count+1
     //拍照
     ctx.takePhoto({
     quality: 'high',
     　success: (res) => {
-    console.log(res.tempImagePath)
-    that.setData({
-    src: res.tempImagePath
-    })
-    　　　　　　　　　　that.localhostimgesupdata(res.tempImagePath)
+      
+      wx.cloud.uploadFile({
+        
+        // 指定上传到的云路径
+        cloudPath: String(count)+'.png',
+        // 指定要上传的文件的小程序临时文件路径
+        filePath: res.tempImagePath,
+        // 成功回调
+        success: resp => {
+          console.log('上传成功', resp.fileID)
+          wx.cloud.getTempFileURL({
+            fileList: [resp.fileID],
+            success: respon => {
+              // fileList 是一个有如下结构的对象数组
+              // [{
+              //    fileID: 'cloud://xxx.png', // 文件 ID
+              //    tempFileURL: '', // 临时文件网络链接
+              //    maxAge: 120 * 60 * 1000, // 有效期
+              // }]
+              
+              console.log('url:',respon.fileList[0].tempFileURL)
+              that.detectface(respon.fileList[0].tempFileURL)
+            },
+            fail: console.error
+          })
+          
+        },
+      })
+
+      console.log(res.tempImagePath)
+      that.setData({
+      src: res.tempImagePath
+      })
+    　　　　　　　　　　
     　　　　　　　　}
     　　　　　　})
     　　　　}
-    　　}, 1000 * 30) //循环间隔 单位ms
+    　　}, 1000 * 3) //循环间隔 单位ms
     },
     
+
+    detectface: function(path) {
+      wx.serviceMarket.invokeService({
+        service: 'wx2d1fd8562c42cebb',
+        api: 'detectFace',
+        data: {
+          "Action": "DetectFace",
+          "Url": path
+        },
+      }).then(res => {
+        console.log('invokeService success', res)
+      }).catch(err => {
+        console.error('invokeService fail', err)
+      })
+    },
 
 
   error(e) {
@@ -104,12 +149,14 @@ Page({
     var count=0;
     tracker.on('track', function(event) {
       count=count+1;
+      console.log('suc');
     });
     wx.getImageInfo({ //将获取图片的信息
       src: path,// 需要下载的图片
       
       success(res){
         var filePath = res.path //得到本地的路径
+        detection
         wx.saveImageToPhotosAlbum({
           filePath: "http://tmp/wx051f914976ef6c22.1.jpg",
           success(res) {

@@ -1,9 +1,11 @@
 var util=require('../../utils/util.js');
 const db = wx.cloud.database()
 const rooms = db.collection('classroom')
+
 Page({
   data: {
     check: [{ val: 20, status: false }, { val: 50, status: false }, { val: 100, status: false }, { val: 200, status: false }],
+    sumScore:0,
     flag: true,
     rooms:[],
     showModalStatus:false
@@ -35,7 +37,7 @@ Page({
       success: function (res) {
         // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
         that.setData({
-          rooms:res.data
+          rooms:res.data,
         })
         console.log(res.data[0])
         for (var index in that.data.rooms) {
@@ -67,6 +69,7 @@ Page({
     var currentStatu = e.currentTarget.dataset.statu;
     this.util(currentStatu)
   },
+
   util: function (currentStatu) {
     /* 动画部分 */
     // 第1步：创建动画实例   
@@ -123,9 +126,12 @@ Page({
           num:1,
           phone: phone,
           state:false,
-          time:0
+          time:0,
+          tasks:[]
         })
       }) 
+
+      
     }, 
 
     cancle:function(e){

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/todo/todo",
     "pages/tododetail/tododetail",
     "pages/tomato/tomato",
@@ -11,8 +12,10 @@
     "pages/teadetail/teadetail",
     "pages/studetail2/studetail2",
     "pages/mylesson/mylesson",
-    "pages/more/more",
-    "pages/login/login"
+    "pages/fillInfo/fillInfo",
+    "pages/login/my/my",
+    "pages/more/more"
+   
   
   ],
   "window": {
@@ -55,7 +58,7 @@
         "selectedIconPath": "images/读书1.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/login/my/my",
         "text": "我的",
         "iconPath": "images/个人g.png",
         "selectedIconPath": "images/个人.png"

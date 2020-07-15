@@ -1,120 +1,19 @@
-.modal-box{
-  width: 580rpx;
-  height: 510rpx;
-  position: fixed;
-  top: 50%;
-  left: 0;
-  z-index: 9999;
-  margin: -270rpx 85rpx;
-  background-color: #fff;
-  border-radius: 36rpx;
-  display: flex;
-  flex-direction: column;
-  padding:10px;
-  }
- 
-.modal-body{
-  position:relative;
-  }
- 
-.modal-content{
-  /* width: 60%; */
-  margin:0 10% 0 30%;
-  overflow: hidden;
-  border-radius: 10rpx;
-  }
- 
-.modal-content{
-  width: 60%;
-  height:150px; 
-  margin:500rpx 170rpx;
-}
-.modal-content .fenxiang{
-  width: 100%;
-  height: 40%;
-}
-
-.icon{
-  width:40px;
-  height:40px;
-  margin:5px auto;
-}
-
-.cbox{
-  width:20px;
-  height:20px;
-  z-index:1;
-  margin-left:10px;
-}
-
-input{
-  visibility: visible;
-}
-
-
-.all{
-  margin:0 auto;
-  width:100%;
-  height:100%;
-}
-
-
-.vertical{
-  display:flex;
-  flex-direction:column;
-}
-.horizontal{
-  display:flex;
-  flex-direction:row;
-  margin-left:2px;
-  
-}
-
-.horizontal-1{
-  position:relative;
-  display:flex;
-  flex-direction:row;
-  margin-left:10px;
-  font-size: small;
-  color: white;
-}
-
-.background{
-  width:100%;
-  height:100%;
-  position:absolute;
-  z-index:-1;
-}
-
-.chart_view {
-  background-color:#E1E1E1;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font:0.2em;
-  margin:10px;
-  padding:3px;
+.score {
+  margin:20rpx 20rpx 15rpx 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   font-family:microsoft yahei;
-  font-size:small;
+  font-size: 30rpx;
   font-weight: 600;
   color:#524f4f;
+  text-align: center;
 }
-.chart_text {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
 
 .rooms{
   display: flex;
   flex-direction: column;
   padding: 5rpx 10rpx;
 }
-
-
 
 .item{
   height: 150rpx;

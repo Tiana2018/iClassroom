@@ -25,7 +25,7 @@
       <vant-icon name="label"/>
       <text>课程介绍:全方面提高英语能力，致力于提分听力阅读，写作，学霸用了都说好，不满意退钱！</text>
     </view>
-    <label>199</label>
+    <label>399</label>
   </view>
 <view class="btn">
 <text class="fonter" bindtap="buy">立即参加</text>

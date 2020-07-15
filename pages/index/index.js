@@ -10,6 +10,7 @@ Page({
   data: {
     show:false,
     active:0,
+    score:0,
     product:[
       {
         _id:'01',
@@ -17,7 +18,7 @@ Page({
         detail: '提高英语成绩备战四级考试',
         location: '6月28日开课！',
         name: '【2020】四六级提分训练营！名师讲解',
-        price: '199',
+        price: '399',
         rate: '最受欢迎课程第一名',
         src: '/images/banner/b1.png',
         time: '48课时',
@@ -64,7 +65,11 @@ Page({
     ],
     color:'',
   },
-
+  setail:function(){
+    wx.redirectTo({
+      url:"../detail/detail"
+    })
+},
   backmy:function(){
     wx.navigateBack();   //返回上一个页面
   },
@@ -72,7 +77,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    this.setData({
+      score:getApp().globalData.sorce
+    })
     
   },
  
